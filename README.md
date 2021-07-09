@@ -1,1 +1,1 @@
-# ma-rapid-ideation-2
+# MA Indie Game Development - Rapid Ideation Session 2

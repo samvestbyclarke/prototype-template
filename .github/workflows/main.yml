@@ -28,11 +28,10 @@ jobs:
       # Cache
       - uses: actions/cache@v2
         with:
-          path: Library
-          key: Library-rapidideation2-WebGL
+          path: /~library/
+          key: Library-${{ matrix.targetPlatform }} }}
           restore-keys: |
-            Library-rapidideation2-WebGL-
-            Library-rapidideation2-
+            Library-${{ matrix.targetPlatform }}-
             Library-
 
       # Test

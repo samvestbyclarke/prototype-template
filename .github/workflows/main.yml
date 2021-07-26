@@ -28,12 +28,12 @@ jobs:
       # Cache
       - uses: actions/cache@v2
         with:
-        path: Library
-        key: Library-rapidideation2-WebGL
-        restore-keys: |
-          Library-rapidideation2-WebGL-
-          Library-rapidideation2-
-          Library-
+          path: Library
+          key: Library-rapidideation2-WebGL
+          restore-keys: |
+            Library-rapidideation2-WebGL-
+            Library-rapidideation2-
+            Library-
 
       # Test
       # - name: Run tests

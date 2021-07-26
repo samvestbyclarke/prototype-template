@@ -69,7 +69,7 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: build-WebGL
+          name: Build-WebGL
           path: build
 
       - name: Deploy 🚀
@@ -77,3 +77,23 @@ jobs:
         with:
           branch: gh-pages
           folder: build/WebGL
+
+  deployPages:
+    needs: buildWebGL
+    name: Deploy to Website 🚀
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: Build-WebGL
+          path: build
+
+      name: Deploy 🚀
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}

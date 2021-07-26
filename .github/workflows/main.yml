@@ -1,6 +1,4 @@
 name: Actions 😎
-version: 1.0
-
 
 variables:
 - name: remoteServerPath

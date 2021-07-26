@@ -25,10 +25,10 @@ jobs:
       # Cache
       - uses: actions/cache@v2
         with:
-          path: BuildCache
-          key: BuildCache-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
-            BuildCache-
+            Library-
 
       # Test
       # - name: Run tests

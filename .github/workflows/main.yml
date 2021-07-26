@@ -1,9 +1,5 @@
 name: Actions 😎
 
-variables:
-- name: remoteServerPath
-  value: public_html/build/1.0/
-
 on:
   push:
     branches:
@@ -62,7 +58,7 @@ jobs:
       #     githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
-      - name: Build project WebGL
+      - name: Build project
         uses: game-ci/unity-builder@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -118,4 +114,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build/WebGL/WebGL/
-          server-dir: ${{ variables.remoteServerPath }}
+          server-dir: public_html/build/

@@ -26,12 +26,13 @@ jobs:
           lfs: true
 
       # Cache
-      - uses: actions/cache@v2
+      - name: Restore Library cache
+        uses: actions/cache@v2
         with:
-          path: /~library/
-          key: Library-${{ matrix.targetPlatform }} }}
+          path: Library
+          key: Library-test-project-${{ matrix.targetPlatform }}
           restore-keys: |
-            Library-${{ matrix.targetPlatform }}-
+            Library-test-project-
             Library-
 
       # Test

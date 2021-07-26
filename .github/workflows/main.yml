@@ -91,7 +91,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: build/
+          folder: /
 
   deployToStaging:
     needs: buildWebGL
@@ -113,4 +113,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: build/WebGL/WebGL/
           server-dir: public_html/build/

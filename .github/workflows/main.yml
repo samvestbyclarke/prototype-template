@@ -6,8 +6,8 @@ on:
       - master
 
 jobs:
-  build:
-    name: buildWebGL
+  buildWebGL:
+    name: WebGl Builder ✨
     strategy:
       fail-fast: false
       matrix:

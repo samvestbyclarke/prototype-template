@@ -30,10 +30,10 @@ jobs:
         uses: actions/cache@v2
         with:
           path: Library
-          key: Library-test-project-${{ matrix.targetPlatform }}
+          key: Library-build-WebGL
           restore-keys: |
-            Library-test-project-
-            Library-
+          Library-build-
+          Library-
 
       # Test
       # - name: Run tests

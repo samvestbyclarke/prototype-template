@@ -1,4 +1,10 @@
 name: Actions 😎
+version: 1.0
+
+
+variables:
+- name: remoteServerPath
+  value: public_html/build/1.0/
 
 on:
   push:
@@ -58,7 +64,7 @@ jobs:
       #     githubToken: ${{ secrets.GITHUB_TOKEN }}
 
       # Build
-      - name: Build project
+      - name: Build project WebGL
         uses: game-ci/unity-builder@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -73,25 +79,25 @@ jobs:
           path: build
 
 
-  deployPages:
-    needs: buildWebGL
-    name: Deploy to Github Pages 🚀
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+  # deployPages:
+  #   needs: buildWebGL
+  #   name: Deploy to Github Pages 🚀
+  #   runs-on: ubuntu-latest
+  #   if: github.ref == 'refs/heads/master'
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: Build-WebGL
-          path: build
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         name: Build-WebGL
+  #         path: build
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: /
+  #     - name: Deploy 🚀
+  #       uses: JamesIves/github-pages-deploy-action@4.1.4
+  #       with:
+  #         branch: gh-pages
+  #         folder: /
 
   deployToStaging:
     needs: buildWebGL
@@ -114,4 +120,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build/WebGL/WebGL/
-          server-dir: public_html/build/
+          server-dir: ${{ variables.remoteServerPath }}

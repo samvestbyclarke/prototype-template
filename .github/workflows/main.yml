@@ -11,8 +11,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        projectPath:
-          - test-project
         unityVersion:
           - 2020.3.13f1
         targetPlatform:
@@ -78,6 +76,7 @@ jobs:
     needs: buildWebGL
     name: Deploy to Github Pages 🚀
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -93,10 +92,11 @@ jobs:
           branch: gh-pages
           folder: build/
 
-  deployWebsite:
+  deployToStaging:
     needs: buildWebGL
-    name: Deploy to website 🚀
+    name: Deploy to staging 🚀
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/develop'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

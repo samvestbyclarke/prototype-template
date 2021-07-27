@@ -28,7 +28,7 @@ function configReplace() {
 		log('##################################################################');
 		log('.yml file generated.');
 		log('URL for game is: ');
-		log('' + stagingURL + "/" + scene + "/" + version + "/" );
+		log('' + stagingURL + "/" + name + "/" + version + "/" );
 		log('##################################################################');
     });
 	

@@ -8,7 +8,7 @@ var replace = require('gulp-replace');
 var rename = require('gulp-rename');
 var log = require('fancy-log');
 
-var name = "PrototypeScene";
+var name = "PrototypeSceneIteration";
 var version = "0.01";
 var stagingURL = "https://samvestbyclarke.com/build";
 

@@ -114,4 +114,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build/WebGL/WebGL/
-          server-dir: public_html/build/PrototypeScene/0.01/
+          server-dir: public_html/build/PrototypeSceneIteration/0.01/

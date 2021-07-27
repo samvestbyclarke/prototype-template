@@ -13,21 +13,12 @@ var version = "0.01";
 var stagingURL = "https://samvestbyclarke.com/build";
 
 
-function replaceScene() {
+function configReplace() {
 
 	return src(['yml-templates/main-template.yml'])
 	.pipe(replace(/{{scene}}/, function(s) {
       return scene;
   }))
-	.pipe(rename('main.yml'))
-	.pipe(dest('.github/workflows'));
-	
-}
-
-
-function replaceVersion() {
-
-	return src(['yml-templates/main-template.yml'])
 	.pipe(replace(/{{version}}/, function(s) {
       return version;
   }))
@@ -45,6 +36,5 @@ function replaceVersion() {
 
 
 exports.config = series(
-    replaceScene,
-    replaceVersion
+    configReplace
 );

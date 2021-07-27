@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpForce: 20
-  _speed: 2.5
+  _speed: 5
   _acceleration: 5
 --- !u!1 &319702120
 GameObject:
@@ -286,8 +286,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319702120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6001, y: 0.6295, z: 0}
-  m_LocalScale: {x: 3.3136106, y: 1.2465798, z: 1}
+  m_LocalPosition: {x: 0.4714, y: 0.6295, z: 0}
+  m_LocalScale: {x: 2.713929, y: 1.2465798, z: 1}
   m_Children: []
   m_Father: {fileID: 1119880977}
   m_RootOrder: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1412,7 +1412,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055349784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.97265244, y: 1.43401, z: -9}
+  m_LocalPosition: {x: -0.10868764, y: 1.43401, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

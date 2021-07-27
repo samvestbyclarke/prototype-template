@@ -8,7 +8,7 @@ var replace = require('gulp-replace');
 var rename = require('gulp-rename');
 var log = require('fancy-log');
 
-var scene = "scene-1";
+var name = "PrototypeScene";
 var version = "0.01";
 var stagingURL = "https://samvestbyclarke.com/build";
 
@@ -16,8 +16,8 @@ var stagingURL = "https://samvestbyclarke.com/build";
 function configReplace() {
 
 	return src(['yml-templates/main-template.yml'])
-	.pipe(replace(/{{scene}}/, function(s) {
-      return scene;
+	.pipe(replace(/{{name}}/, function(s) {
+      return name;
   }))
 	.pipe(replace(/{{version}}/, function(s) {
       return version;

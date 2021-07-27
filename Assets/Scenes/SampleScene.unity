@@ -135,10 +135,11 @@ GameObject:
   - component: {fileID: 308183223}
   - component: {fileID: 308183222}
   - component: {fileID: 308183221}
+  - component: {fileID: 308183225}
   m_Layer: 6
-  m_Name: Hero
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Name: hero
+  m_TagString: Player
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -219,7 +220,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2cd5ed6df38bc5c42a4f439752c46d80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2c3e06f87b608ab45a66c2d5c81b53cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -244,6 +245,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308183225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308183220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c3845477f82814f8b8da091b49b605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jumpForce: 20
+  _speed: 2.5
+  _acceleration: 5
 --- !u!1 &319702120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871061549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1892104202}
